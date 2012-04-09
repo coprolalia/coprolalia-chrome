@@ -1,0 +1,22 @@
+{
+  "name": "Coprolalia",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Enhance your f***ing browsing experience!",
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+  "background": {
+    "scripts": ["background.js"]
+  },  
+  "browser_action": {
+    "default_icon": "on.png",
+    "default_title": "Coprolalia is active. Click to deactivate."
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["coprolalia.js"]
+    }
+  ],
+  "permissions": [
+  ]
+}
