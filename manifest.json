@@ -1,11 +1,12 @@
 {
   "name": "Coprolalia",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
   "description": "Enhance your f***ing browsing experience!",
   "icons": { "48": "icon48.png", "128": "icon128.png" },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+  	"persistent": false
   },  
   "browser_action": {
     "default_icon": "on.png",

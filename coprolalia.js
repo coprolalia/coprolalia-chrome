@@ -10,8 +10,8 @@
 
 var coprolalia = 
 {   
-  adjectives: ['fucking', 'goddamn', 'motherfucking', 'filthy', 'rotten', 'cocksucking', 'stupid', 'shitty', 'bloody', 'fucked-up'],
-  personal: ['asshole', 'motherfucker', 'moron', 'pussy', 'idiot', 'bastard', 'bitch', 'crackhead', 'dickhead', 'cunt', 'assfucker', 'cocksucker', 'cuntsucker', 'hillbilly', 'jackass', 'old fart', 'freak', 'shithead', 'son of a bitch', 'bitch', 'cuntface', 'dumbass', 'scumbag', 'fuckup'],
+  adjectives: ["bloody", "cocksucking", "filthy", "fucked-up", "fucking", "goddamn", "motherfucking", "rotten", "shitty", "stupid"],
+  personal: ["assfucker", "asshole", "bastard", "bitch", "bitch", "cocksucker", "crackhead", "cunt", "cuntface", "cuntsucker", "dickhead", "dumbass", "dumbwit", "freak", "fuckup", "fuckwit", "hillbilly", "honk", "idiot", "jackass", "moron", "motherfucker", "old fart", "pussy", "scumbag", "shithead", "son of a bitch"],
   splitLen: 31,  
   
   //----------------------------------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ var coprolalia =
   start: function()
   //----------------------------------------------------------------------------------------------------------
   { 
-  	chrome.extension.sendRequest({method: "getStatus"}, function(response) {
+  	chrome.runtime.sendMessage({method: "getStatus"}, function(response) {
 		  if(response.data == "on")
 		  	coprolalia.inspect(document.documentElement);
 		});    
